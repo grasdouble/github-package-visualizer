@@ -13,7 +13,9 @@
     "dev:client": "pnpm --filter client dev",
     "build": "pnpm --filter server build && pnpm --filter client build",
     "build:server": "pnpm --filter server build",
-    "build:client": "pnpm --filter client build"
+    "build:client": "pnpm --filter client build",
+    "build:vscode": "pnpm --filter github-package-visualizer-vscode build:all",
+    "dev:vscode": "concurrently -n ext,webview -c magenta,yellow \"pnpm --filter github-package-visualizer-vscode watch\" \"pnpm --filter github-package-visualizer-vscode watch:webview\""
   },
   "keywords": [],
   "author": "",
@@ -29,5 +31,8 @@
     "node": ">=18",
     "pnpm": ">=9"
   },
-  "packageManager": "pnpm@10.30.1"
+  "packageManager": "pnpm@10.30.1",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "@vscode/vsce-sign", "keytar"]
+  }
 }

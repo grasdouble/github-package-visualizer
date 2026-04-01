@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build:all",
+      "type": "shell",
+      "command": "node esbuild.mjs && node esbuild.webview.mjs",
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      }
+    }
+  ]
+}

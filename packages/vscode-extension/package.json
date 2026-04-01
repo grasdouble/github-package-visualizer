@@ -1,0 +1,72 @@
+{
+  "name": "github-package-visualizer-vscode",
+  "displayName": "Package Visualizer",
+  "description": "Browse npm and GitHub Registry package contents directly in VSCode",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "packageVisualizer",
+          "title": "Package Visualizer",
+          "icon": "$(package)"
+        }
+      ]
+    },
+    "views": {
+      "packageVisualizer": [
+        {
+          "type": "webview",
+          "id": "packageVisualizer.sidebar",
+          "name": "Package Visualizer"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "packageVisualizer.open",
+        "title": "Package Visualizer: Open",
+        "icon": "$(package)"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "packageVisualizer.open"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "build:webview": "node esbuild.webview.mjs",
+    "build:all": "node esbuild.mjs && node esbuild.webview.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "watch:webview": "node esbuild.webview.mjs --watch",
+    "package": "vsce package --no-dependencies",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@types/tar-stream": "^3.1.3",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tar-stream": "^3.1.7",
+    "lucide-react": "^0.468.0"
+  },
+  "private": true
+}
