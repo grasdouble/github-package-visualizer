@@ -1,0 +1,33 @@
+{
+  "name": "github-package-visualizer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browse the contents of npm or GitHub Registry packages",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noofreuuuh/github-package-visualizer.git"
+  },
+  "scripts": {
+    "dev": "concurrently -n server,client -c cyan,green \"pnpm --filter server dev\" \"pnpm --filter client dev\"",
+    "dev:server": "pnpm --filter server dev",
+    "dev:client": "pnpm --filter client dev",
+    "build": "pnpm --filter server build && pnpm --filter client build",
+    "build:server": "pnpm --filter server build",
+    "build:client": "pnpm --filter client build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noofreuuuh/github-package-visualizer/issues"
+  },
+  "homepage": "https://github.com/noofreuuuh/github-package-visualizer#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@10.30.1"
+}
