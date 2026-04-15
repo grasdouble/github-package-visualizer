@@ -2,6 +2,12 @@
 
 A web app to browse the contents of npm or GitHub Registry packages — file tree, syntax-highlighted source files, README, and more.
 
+<p align="center">
+  <a href="https://youtu.be/kOFsZOv8PNk">
+    <img src="https://img.youtube.com/vi/kOFsZOv8PNk/0.jpg" alt="Demo vidéo" />
+  </a>
+</p>
+
 ## Stack
 
 - **Client**: React + Vite + TypeScript
