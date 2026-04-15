@@ -1,3 +1,13 @@
+# ⚠️ ARCHIVED — No longer maintained
+
+> This repository has been archived and is frozen.
+> No new features, bug fixes, or commits will be made.
+> It is preserved here for historical reference only.
+
+The project has been moved to [grasdouble/Lufa-Lab](https://github.com/grasdouble/Lufa-Lab) under `packages/web/github-package-visualizer/`.
+
+---
+
 # GitHub Package Visualizer
 
 A web app to browse the contents of npm or GitHub Registry packages — file tree, syntax-highlighted source files, README, and more.
